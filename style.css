@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f2f4f7;
+  color: #222;
+  line-height: 1.5;
+}
+
+header {
+  background: #2b6cb0;
+  color: white;
+  padding: 24px;
+  text-align: center;
+}
+
+header p {
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+main {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Form with Flexbox */
+#note-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 12px;
+}
+
+#note-form label {
+  width: 100%;
+  font-weight: 600;
+}
+
+#note-input, #note-category {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2b6cb0;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1a4e85;
+  transform: translateY(-1px);
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+#error-message {
+  color: red;
+  min-height: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* Note card */
+.note-card {
+  list-style: none;
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-left-width: 6px;
+  border-radius: 10px;
+  margin: 12px 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.category-personal {
+  border-left-color: teal;
+}
+
+.category-work {
+  border-left-color: #9b2c2c;
+}
+
+.category-study {
+  border-left-color: #2b6cb0;
+}
+
+.note-meta {
+  font-size: 0.8rem;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#clear-all-btn {
+  background: #e53e3e;
+  margin-top: 12px;
+}
+
+#clear-all-btn:hover {
+  background: #b91c1c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #note-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #note-input, #note-category, #note-form button {
+    width: 100%;
+  }
+}
